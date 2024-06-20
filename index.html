@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello, World!</title>
+  <title>Therapy Buddy - Empower Your Mental Health Journey</title>
   <style>
     body {
       margin: 0;
@@ -22,20 +22,24 @@
       padding: 0 20px; 
     }
     .header {
-      color: #191919;
+      color: #0B4251;
       font-size: 3rem;
       font-weight: 900;
-      margin-bottom: 4rem; 
+      margin-bottom: 2rem; 
     }
     .about {
       display: flex;
+      flex-direction: row;
       width: 100%;
-      max-width: 100%;
+      background: url('background-image.jpg') no-repeat center center;
+      background-size: cover;
+      border-radius: 10px;
+      overflow: hidden;
     }
     .left-about {
       flex: 1; 
       padding: 2rem;
-      background-color: #191919;
+      background-color: rgba(11, 66, 81, 0.8); /* Dark teal with opacity */
       color: #fff;
     }
     .left-about h1 {
@@ -51,8 +55,8 @@
     .right-about {
       flex: 1; 
       padding: 2rem;
+      background: rgba(244, 159, 28, 0.8); /* Warm orange with opacity */
       color: #191919;
-      background: #fff;
     }
     .right-about h2 {
       font-size: 3rem;
@@ -67,9 +71,9 @@
     .button {
       display: inline-block;
       padding: 20px 40px;
-      background: #fff;
+      background: #f49f1c;
       border-radius: 10px;
-      color: #191919;
+      color: #fff;
       font-family: 'Inter', sans-serif;
       font-size: 1.5rem;
       font-weight: 600;
@@ -78,15 +82,16 @@
       transition: background 0.3s ease;
     }
     .button:hover {
-      background: #f0f0f0;
+      background: #e38a1b;
     }
     .schedule {
       width: 100%;
-      max-width: 100%;
-      margin-left: 50px;
+      margin-top: 2rem;
       padding: 2rem;
-      background-color: #f0f0f0;
+      background-color: #fff;
       color: #191919;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .schedule h1 {
       font-size: 2.5rem;
@@ -102,29 +107,22 @@
     .timing {
       display: flex;
       width: 100%;
-      justify-content: flex-start;
-      gap: 300px; 
-      margin-left: 50px; 
-      margin-top: -50px;
+      justify-content: space-around;
+      gap: 10px; /* Adjust gap between boxes */
     }
     .box {
-      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100px;
-      height: 30px;
+      width: auto;
+      padding: 10px 20px;
       font-size: 12px;
       background-color: black;
       border-radius: 10px;
       color: white;
-      padding-top: 15px;
     }
-
     .day {
-      width: 100%;
-      max-width: 100%;
-      height: 150px;
+      width: 30%;
       background: #F8F8F8;
       color: black;
       padding: 20px;
@@ -134,66 +132,52 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     .day h1 {
       color: #000;
       font-family: Inter;
       font-size: 40px;
-      font-style: normal;
       font-weight: 900;
-      line-height: normal;
-      letter-spacing: -1.6px;
-      text-align: center;
       margin-bottom: 10px;
     }
     .day p {
       color: #000;
       font-family: Inter;
       font-size: 24px;
-      font-style: normal;
       font-weight: 400;
-      line-height: normal;
-      letter-spacing: -0.96px;
-      opacity: 0.5;
-      text-align: center;
+      opacity: 0.7;
     }
     .peoples {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       width: 100%;
-      max-width: 100%;
-      padding: 0 20px; 
+      flex-wrap: wrap;
       gap: 10px;
-      
     }
     .registration {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-top: 70px; 
+      margin-top: 2rem;
       text-align: center;
-    margin-bottom: 40px;
     }
     .registration h1 {
-      color: #191919;
+      color: #0B4251;
       font-family: Inter;
-      font-size: 50px;
-      font-style: normal;
+      font-size: 3rem;
       font-weight: 900;
-      line-height: normal;
-      letter-spacing: -2.88px;
       margin-bottom: 20px; 
     }
     .registration button {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
-      padding: 20px 40px; 
+      padding: 15px 30px; 
       border-radius: 10px;
-      background: #000;
+      background: #0B4251;
       color: white;
       font-family: 'Inter', sans-serif;
       font-size: 1.5rem;
@@ -202,89 +186,63 @@
       transition: background 0.3s ease;
     }
     .registration button:hover {
-      background: #333;
+      background: #083338;
     }
 
     @media only screen and (max-width: 1200px) {
-  .container {
-    padding: 0 15px;
-  }
-}
+      .container {
+        padding: 0 15px;
+      }
+    }
 
-@media only screen and (max-width: 992px) {
-  .about {
-    flex-direction: column;
-  }
-  .timing {
-    gap: 20px; /* Adjust gap between boxes */
-    justify-content: center;
-    margin-left: 0;
-    margin-top: 0;
-  }
-}
+    @media only screen and (max-width: 992px) {
+      .about {
+        flex-direction: column;
+      }
+      .timing {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
 
-@media only screen and (max-width: 768px) {
-  .header {
-    font-size: 2.5rem;
-  }
-  .left-about {
-    padding: 1.5rem;
-  }
-  .right-about {
-    padding: 1.5rem;
-  }
-  .schedule {
-    padding: 1.5rem;
-  }
-  .day {
-    padding: 15px;
-  }
-  .registration h1 {
-    font-size: 2.5rem;
-  }
-  .registration button {
-    padding: 15px 30px;
-    font-size: 1.25rem;
-  }
-}
+    @media only screen and (max-width: 768px) {
+      .header {
+        font-size: 2.5rem;
+      }
+      .left-about, .right-about, .schedule {
+        padding: 1.5rem;
+      }
+      .day {
+        width: 80%;
+        padding: 15px;
+      }
+      .registration h1 {
+        font-size: 2.5rem;
+      }
+      .registration button {
+        padding: 15px 30px;
+        font-size: 1.25rem;
+      }
+    }
 
-@media only screen and (max-width: 576px) {
-  .header {
-    font-size: 2rem;
-  }
-  .left-about h1 {
-    font-size: 3rem;
-  }
-  .left-about p {
-    font-size: 1.25rem;
-  }
-  .right-about h2 {
-    font-size: 2.5rem;
-  }
-  .right-about p {
-    font-size: 1rem;
-  }
-  .schedule h1 {
-    font-size: 2rem;
-  }
-  .schedule p {
-    font-size: 1rem;
-  }
-  .day h1 {
-    font-size: 2rem;
-  }
-  .day p {
-    font-size: 1rem;
-  }
-  .registration h1 {
-    font-size: 2rem;
-  }
-  .registration button {
-    padding: 12px 24px;
-    font-size: 1rem;
-  }
-}
-
+    @media only screen and (max-width: 576px) {
+      .header {
+        font-size: 2rem;
+      }
+      .left-about h1, .right-about h2 {
+        font-size: 2.5rem;
+      }
+      .left-about p, .right-about p, .schedule p {
+        font-size: 1rem;
+      }
+      .schedule h1, .day h1, .registration h1 {
+        font-size: 2rem;
+      }
+      .registration button {
+        padding: 12px 24px;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -297,8 +255,8 @@
         <a href="#" class="button">Sign Up Now</a>
       </div>
       <div class="right-about">
-        <h2>Random Text</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida ex in ipsum vestibulum, vel hendrerit ipsum faucibus.</p>
+        <h2>Join Our Community</h2>
+        <p>Experience personalized care and support from professional therapists dedicated to your well-being.</p>
       </div>
     </div>
     <div class="schedule">
@@ -306,9 +264,9 @@
       <p>Join us for group therapy sessions tailored to your needs.</p>
     </div>
     <div class="timing">
-      <p class="box">6PM - 7PM</p>
-      <p class="box">6PM - 7PM</p>
-      <p class="box">6PM - 7PM</p>
+      <div class="box">6PM - 7PM</div>
+      <div class="box">6PM - 7PM</div>
+      <div class="box">6PM - 7PM</div>
     </div>
     <div class="peoples">
       <div class="day">
@@ -326,12 +284,5 @@
     </div>
     <div class="registration">
       <h1>Sign Up Now</h1>
-      <button>Registration Mandatory</button>
-    </div>
-    <div class="registration">
-      <h1>Individual Therapy Goes LIVE on July 15th.</h1>
-      <button></button>
-    </div>
-  </div>
-</body>
-</html>
+      <button>Registration Mandatory</button
+

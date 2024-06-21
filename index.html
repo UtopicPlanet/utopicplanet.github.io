@@ -69,33 +69,49 @@
       }
       /* Container styles */
       .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 100px auto 0;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: calc(100vh - 80px);
+            width: 100%;
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 80px);
       }
       /* Header styles */
       .header {
-        text-align: center;
-        color: #333;
-        margin-bottom: 30px;
-      }
-      .header h1 {
-        font-size: 3.5rem;
-        font-weight: 900;
-        line-height: 1.2;
-        margin-bottom: 10px;
-      }
-      .header p {
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: #666;
-      }
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            font-family: 'Pacifico', cursive;
+        }
+        .header p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .hero {
+            background: url('path/to/hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero .header {
+            font-size: 4rem;
+            animation: fadeIn 2s;
+        }
       /* About section styles */
       .about {
         display: flex;
@@ -140,7 +156,7 @@
         transition: background 0.3s ease;
       }
       .left-about .button:hover {
-        background: green;
+        background: red;
       }
       .right-about {
         flex: 1;
@@ -259,32 +275,34 @@
       }
       /* Registration section styles */
       .registration {
-        text-align: center;
-        margin-bottom: 40px;
-      }
-      .registration h2 {
-        font-size: 2.5rem;
-        font-weight: 900;
-        margin-bottom: 20px;
-        margin-top: 20px;
-      }
-      .registration button {
-        display: inline-block;
-        padding: 15px 40px;
-        background: #000;
-        border-radius: 8px;
-        color: #fff;
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-decoration: none;
-        text-align: center;
-        transition: background 0.3s ease;
-        border: none;
-        cursor: pointer;
-      }
-      .registration button:hover {
-        background: red;
-      }
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+        .registration h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .registration button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(90deg, #0B4251, #F49F1C);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .registration button:hover {
+            background: linear-gradient(90deg, #F49F1C, #0B4251);
+        }
+
       /* Footer styles */
       footer {
         background-color: #333;
@@ -297,6 +315,24 @@
         font-size: 1rem;
         margin: 0;
       }
+
+      .parallax {
+  background: url('https://images.unsplash.com/photo-1519337265831-281ec6cc8514?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGhhcHB5JTIwcGVyc29uJTIwanVtcGluZ3xlbnwwfHx8fDE2NTUwNDg0NjI&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  opacity: 0.8;
+}
+
+      @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
       /* Responsive design */
       @media only screen and (max-width: 992px) {
         body {
@@ -306,6 +342,9 @@
         }
         .container {
           padding: 15px; 
+        }
+        .header h1 {
+          font-size: 2rem;
         }
         .about {
           flex-direction: column;
@@ -376,10 +415,10 @@
       }
       @media only screen and (max-width: 576px) {
         body {
-          background-size: cover;
+            background-size: cover;
           background-position: center;
           background-attachment: fixed; 
-        }
+  }
         .container {
           padding: 10px; 
         }
@@ -464,10 +503,12 @@
       </i>
     </header>
     <div class="container">
-      <header class="header">
-        <h1>Therapy Buddy</h1>
-        <p>Empowering Mental Health Practitioners!</p>
-      </header>
+        <div class="hero">
+            <header class="header">
+                <h1>Welcome to Therapy Buddy</h1>
+                <p>Your partner in free group therapy sessions</p>
+            </header>
+        </div>
       <section class="about">
         <div class="left-about">
           <h2>Free Group Therapy</h2>
@@ -517,15 +558,26 @@
           </section>
         </div>
       </section>
-      <section class="registration">
-        <h2>Sign Up Now</h2>
-        <button>Registration Mandatory</button>
-      </section>
+     
       <!-- <section class="registration">
       <h2>Individual Therapy Goes LIVE on July 15th.</h2>
       <button>Register Now</button>
     </section> -->
     </div>
+    <!-- Parallax section -->
+    <div class="parallax">
+        <section class="registration">
+            <h2>Sign Up Now</h2>
+            <button>Registration Mandatory</button>
+          </section>
+
+          <section class="registration">
+            <h2 style="background-color: rgb(255, 255, 255);">Individual Therapy Goes LIVE on July 15th.</h2>
+           
+          </section>
+    </div>
+
+
     <footer>
       <p>&copy; 2024 Therapy Buddy. All rights reserved.</p>
     </footer>

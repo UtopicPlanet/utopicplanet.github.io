@@ -12,40 +12,339 @@
       referrerpolicy="no-referrer"
     />
     <style>
-        * {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://wallpaperboat.com/wp-content/uploads/2020/09/21/55222/medical-10.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      /* Navbar styles */
+      .nav {
+        background-color: #333;
+        color: #fff;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+      .nav h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+      .links {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .links a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        padding: 10px 15px;
+      }
+      .links a:hover {
+        color: #f0f0f0;
+      }
+      .fas {
+        display: none;
+        cursor: pointer;
+      }
+      /* Container styles */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 100px auto 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: calc(100vh - 80px);
+      }
+      /* Header styles */
+      .header {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+      }
+      .header h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+      .header p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #666;
+      }
+      /* About section styles */
+      .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 60px;
+      }
+      .left-about {
+        flex: 1;
+        padding: 40px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 10px;
+        margin-right: 30px;
+        transition: transform 0.3s ease;
+      }
+      .left-about:hover {
+        transform: translateY(-10px);
+      }
+      .left-about h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+      .left-about p {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+
+      .left-about .button {
+        display: inline-block;
+        padding: 15px 30px;
+        background: #fff;
+        border-radius: 8px;
+        color: #333;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+        transition: background 0.3s ease;
+      }
+      .left-about .button:hover {
+        background: green;
+      }
+      .right-about {
+        flex: 1;
+        padding: 40px;
+        background-color: #fff;
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .right-about:hover {
+        transform: translateY(-10px);
+      }
+      .right-about h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+      .right-about p {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      /* Schedule section styles */
+      .schedule {
+        width: 100%;
+        padding: 40px;
+        background-color: #fff;
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .schedule h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+      .schedule p {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      .timing {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+      }
+
+      .timing .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+        cursor: pointer;
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 600;
+        width: 150px;
+        height: 50px;
+        border-radius: 8px;
+        margin: 0 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      .timing .box + .box {
+        border: 1px solid black; 
+      }
+
+      .line {
+        width: 22%; 
+        height: 1px;
+        background-color: red; 
+        margin-top: 30px;
+      }
+
+      .timing .box:hover {
+        background-color: #555;
+      }
+      /* People section styles */
+      .peoples {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 60px;
+        transition: transform 0.3s ease;
+        margin-top: 60px;
+      }
+      .day:hover {
+        transform: translateY(-10px);
+      }
+      .day {
+        flex: 1;
+        padding: 40px;
+        background-color: #fff;
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 0 20px;
+      }
+      .day h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+      .day p {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      /* Registration section styles */
+      .registration {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .registration h2 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .registration button {
+        display: inline-block;
+        padding: 15px 40px;
+        background: #000;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+        transition: background 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+      .registration button:hover {
+        background: red;
+      }
+      /* Footer styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
+      }
+      footer p {
+        font-size: 1rem;
+        margin: 0;
+      }
+      /* Responsive design */
+      @media only screen and (max-width: 992px) {
         body {
-          font-family: "Arial", sans-serif;
-          line-height: 1.6;
-          background-color: #f0f0f0;
-          margin: 0;
-          padding: 0;
-          background-image: url("https://wallpaperboat.com/wp-content/uploads/2020/09/21/55222/medical-10.jpg");
           background-size: cover;
           background-position: center;
-          background-attachment: fixed;
+          background-attachment: fixed; 
         }
-      
-        /* Navbar styles */
-        .nav {
-          background-color: #333;
-          color: #fff;
-          height: 80px;
+        .container {
+          padding: 15px; 
+        }
+        .about {
+          flex-direction: column;
+          text-align: center;
+        }
+        .left-about {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+        .right-about {
+          margin-top: 30px;
+        }
+        .schedule {
+          padding: 30px;
+        }
+        .timing {
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
           align-items: center;
-          padding: 0 20px;
-          position: fixed;
-          width: 100%;
-          top: 0;
-          z-index: 1000;
         }
-        .nav h1 {
-          margin: 0;
-          font-size: 2rem;
+        .timing .box {
+          width: 120px;
+          height: 40px;
+          font-size: 1rem;
+        }
+        .peoples {
+          width: 100%;
+          flex-direction: column;
+        }
+        .day {
+          width: 100%;
+          margin: 20px 0;
+        }
+        .timing-day {
+          display: flex;
+          gap: 20px;
+        }
+        .line {
+          display: none;
         }
         .links {
           display: none;
@@ -63,360 +362,84 @@
         }
         .links a {
           padding: 15px;
-          color: #fff;
-          font-size: 1.25rem;
-          font-weight: 600;
-          text-decoration: none;
-          transition: color 0.3s ease;
         }
-        .links a:hover {
-          color: #f0f0f0;
+        .nav h1 {
+          font-size: 1.8rem;
         }
         .fas {
           display: block;
-          cursor: pointer;
           z-index: 1000;
         }
-      
-        /* Container styles */
+        .links.show + .fas {
+          color: #fff;
+        }
+      }
+      @media only screen and (max-width: 576px) {
+        body {
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed; 
+        }
         .container {
-          width: 100%;
-          max-width: 1200px;
-          margin: 80px auto 0; 
-          padding: 20px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          min-height: calc(100vh - 80px); 
+          padding: 10px; 
         }
-      
-        /* Header styles */
-        .header {
-          text-align: center;
-          color: #333;
-          margin-bottom: 30px;
+        .nav {
+          height: 60px;
         }
-        .header h1 {
-          font-size: 3.5rem;
-          font-weight: 900;
-          line-height: 1.2;
-          margin-bottom: 10px;
+        .nav h1 {
+          font-size: 1.8rem;
         }
-        .header p {
-          font-size: 1.5rem;
-          font-weight: 400;
-          color: #666;
+        .links a {
+          font-size: 1rem;
+          padding: 10px;
         }
-      
-        /* About section styles */
-        .about {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          margin-bottom: 60px;
+        .left-about {
+          padding: 30px;
         }
-        .left-about,
         .right-about {
-          flex: 1;
-          padding: 40px;
-          background-color: #fff;
-          color: #333;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          margin-bottom: 30px;
-          text-align: center;
+          padding: 30px;
         }
-        .left-about h2,
-        .right-about h2 {
-          font-size: 2.5rem;
-          font-weight: 900;
-          margin-bottom: 20px;
-        }
-        .left-about p,
-        .right-about p {
-          font-size: 1.25rem;
-          font-weight: 400;
-          line-height: 1.6;
-          margin-bottom: 30px;
-        }
-        .left-about .button {
-          display: inline-block;
-          padding: 15px 30px;
-          background: #333;
-          border-radius: 8px;
-          color: #fff;
-          font-size: 1.5rem;
-          font-weight: 600;
-          text-decoration: none;
-          transition: background 0.3s ease;
-        }
-        .left-about .button:hover {
-          background: green;
-        }
-      
-        /* Schedule section styles */
         .schedule {
-          width: 100%;
-          padding: 40px;
-          background-color: #fff;
-          color: #333;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          text-align: center;
-          margin-bottom: 60px;
-        }
-        .schedule h2 {
-          font-size: 2.5rem;
-          font-weight: 900;
-          margin-bottom: 20px;
-        }
-        .schedule p {
-          font-size: 1.25rem;
-          font-weight: 400;
-          line-height: 1.6;
-          margin-bottom: 30px;
-        }
-        .timing {
-          display: flex;
-          justify-content: space-evenly;
-          margin-top: 20px;
-        }
-        .timing .box {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: #333;
-          cursor: pointer;
-          color: #fff;
-          font-size: 1.25rem;
-          font-weight: 600;
-          width: 150px;
-          height: 50px;
-          border-radius: 8px;
-          margin: 0 10px;
-          transition: background-color 0.3s ease;
-        }
-        .timing .box + .box {
-          border: 1px solid black; 
+          padding: 30px;
+          justify-content: space-between;
         }
         .line {
-          width: 22%;
-          height: 1px;
-          background-color: red;
-          margin-top: 30px;
+          display: none;
         }
-        .timing .box:hover {
-          background-color: #555;
+        .timing {
+          margin-left: -20px;
         }
-      
-        /* People section styles */
+        .timing .box {
+          width: 120px;
+          height: 35px;
+          font-size: 0.7rem;
+          font-weight: bold;
+          padding: 5px;
+        }
         .peoples {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
           width: 100%;
-          margin-bottom: 60px;
-          margin-top: 60px;
+          flex-direction: column;
         }
         .day {
-          flex: 1 0 calc(30% - 40px); 
-          padding: 40px;
-          background-color: #fff;
-          color: #333;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          text-align: center;
-          margin: 0 20px 20px 20px;
+          padding: 10px;
         }
         .day h2 {
-          font-size: 2rem;
-          font-weight: 900;
-          margin-bottom: 20px;
+          font-size: 1rem;
+          overflow-wrap: break-word;
         }
         .day p {
-          font-size: 1.25rem;
-          font-weight: 400;
-          line-height: 1.6;
-          margin-bottom: 20px;
-        }
-      
-        /* Registration section styles */
-        .registration {
-          text-align: center;
-          margin-bottom: 40px;
+          font-size: 0.8rem;
+          overflow-wrap: break-word;
         }
         .registration h2 {
-          font-size: 2.5rem;
-          font-weight: 900;
-          margin-bottom: 20px;
-          margin-top: 20px;
+          font-size: 2rem;
         }
         .registration button {
-          display: inline-block;
-          padding: 15px 40px;
-          background: #000;
-          border-radius: 8px;
-          color: #fff;
-          font-size: 1.5rem;
-          font-weight: 600;
-          text-decoration: none;
-          text-align: center;
-          transition: background 0.3s ease;
-          border: none;
-          cursor: pointer;
+          padding: 15px 30px;
+          font-size: 1.25rem;
         }
-        .registration button:hover {
-          background: red;
-        }
-      
-        /* Footer styles */
-        footer {
-          background-color: #333;
-          color: #fff;
-          padding: 20px 0;
-          text-align: center;
-          width: 100%;
-        }
-        footer p {
-          font-size: 1rem;
-          margin: 0;
-        }
-      
-        /* Responsive design */
-        @media only screen and (max-width: 992px) {
-          body {
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-          }
-          .container {
-            padding: 15px;
-          }
-          .about {
-            flex-direction: column;
-            text-align: center;
-          }
-          .left-about,
-          .right-about {
-            margin-right: 0;
-            margin-bottom: 30px;
-          }
-          .right-about {
-            margin-top: 30px;
-          }
-          .schedule {
-            padding: 30px;
-          }
-          .timing {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-          .timing .box {
-            width: 120px;
-            height: 40px;
-            font-size: 1rem;
-          }
-          .peoples {
-            flex-direction: column;
-          }
-          .day {
-            width: 100%;
-            margin: 20px 0;
-          }
-          .timing-day {
-            display: flex;
-            gap: 20px;
-          }
-          .line {
-            display: none;
-          }
-          .links {
-            display: none;
-            position: absolute;
-            top: 80px;
-            left: 0;
-            right: 0;
-            background-color: #333;
-            flex-direction: column;
-            text-align: center;
-            z-index: 999;
-          }
-          .links.show {
-            display: flex;
-          }
-          .links a {
-            padding: 15px;
-          }
-          .nav h1 {
-            font-size: 1.8rem;
-          }
-          .fas {
-            display: block;
-            z-index: 1000;
-          }
-          .links.show + .fas {
-            color: #fff;
-          }
-        }
-      
-        /* Adjustments for small screens */
-        @media only screen and (max-width: 576px) {
-          body {
-            background-size: auto; 
-            background-position: center;
-            background-attachment: scroll;
-          }
-          .nav {
-            height: 60px;
-            padding: 0 10px;
-          }
-          .nav h1 {
-            font-size: 1.8rem;
-          }
-          .links {
-            top: 60px;
-          }
-          .links a {
-            padding: 10px;
-            font-size: 1rem;
-          }
-          .fas {
-            display: block;
-          }
-      
-          /* Adjustments for content sections */
-          .about {
-            flex-direction: column;
-            text-align: center;
-          }
-          .left-about,
-          .right-about {
-            padding: 20px;
-            margin: 0 0 20px 0;
-          }
-          .schedule {
-            padding: 20px;
-          }
-          .timing .box {
-            width: auto;
-            height: 40px;
-            font-size: 0.9rem;
-            padding: 10px;
-          }
-          .day {
-            padding: 20px;
-            margin: 0 0 20px 0;
-          }
-          .registration button {
-            padding: 15px 30px;
-            font-size: 1.25rem;
-          }
-        }
-      </style>
-      
+      }
+    </style>
   </head>
   <body>
     <header class="nav">

@@ -16,7 +16,7 @@ function Home() {
       <header className="bg-gray-800 text-white h-20 flex justify-between items-center px-5 fixed w-full top-0 z-50">
         <div className="flex items-center gap-2">
           <img className="w-12" src={theorybuddyLogo} alt="Buddy Up Logo" />
-          <p className="text-lg text-white font-bold text-2xl md:text-4xl">Theory-Buddy</p>
+          <p className="text-lg text-white font-bold text-2xl md:text-4xl">Therapy-Buddy</p>
         </div>
         <div
           className={`absolute top-20 left-0 w-full bg-black transition-transform duration-300 ${

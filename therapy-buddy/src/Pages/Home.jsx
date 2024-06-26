@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "../App.css";
 import theorybuddyLogo from "../images/theorpybuddy.png";
-import firstGroupImage from "../images/group_image_1.png";
 import facebookLogo from "../images/facebook_logo.svg";
 import twitterLogo from "../images/twitter_logo.svg";
 import instagramLogo from "../images/insta_logo.svg";
@@ -14,11 +13,6 @@ function Home() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
-  const handleClick =() =>{
-    window.location.href = "https://bit.ly/4bd4Mlx";
-  }
-
 
   return (
     <div className="bg-cover bg-center w-full bg-fixed min-h-screen">
@@ -100,16 +94,16 @@ function Home() {
             <p className="mt-4 md:mt-8">Therapy Sessions Today!</p>
           </div>
           <div>
-            <div className="mt-8 text-base font-light md:text-lg">
+            <div className="mt-8 text-lg font-light md:text-xl">
               <p style={{ color: "#463426", fontFamily: "Nunito" }}>
                 Find comfort and support in a community that understands you.
                 Our free
               </p>
-              <p style={{ color: "#463426", fontFamily: "Nunito" }}>
+              <p style={{ color: "#463426", fontFamily: "Nunito", marginTop: "0.5rem" }}>
                 group therapy sessions provide a safe space for sharing,
                 healing, and
               </p>
-              <p style={{ color: "#463426", fontFamily: "Nunito" }}>
+              <p style={{ color: "#463426", fontFamily: "Nunito",marginTop: "0.5rem" }}>
                 personal growth.
               </p>
             </div>
@@ -144,11 +138,11 @@ function Home() {
         >
           Group Therapy
         </p>
-        <div className="mt-8 text-base font-light md:text-lg">
+        <div className="mt-8 text-lg font-light md:text-xl">
           <p style={{ color: "#463426", fontFamily: "Nunito" }}>
             Experience the benefits of shared healing and collective growth in a
           </p>
-          <p style={{ color: "#463426", fontFamily: "Nunito" }}>
+          <p style={{ color: "#463426", fontFamily: "Nunito", marginTop: "0.5rem" }}>
             supportive and compassionate environment.
           </p>
         </div>

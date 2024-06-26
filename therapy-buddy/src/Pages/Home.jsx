@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "../App.css";
-import theorybuddyLogo from "../images/theorpybuddy.png";
-import facebookLogo from "../images/facebook_logo.svg";
+import websiteLogo from "../images/new_webiste_logo.png";
+import instaLogo from "../images/insta_logo.svg";
 import twitterLogo from "../images/twitter_logo.svg";
-import instagramLogo from "../images/insta_logo.svg";
+import linkdinLogo from "../images/linkdin_logo.svg";
+import bg_2 from "../images/bg_2.png";
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,64 +17,29 @@ function Home() {
 
   return (
     <div className="bg-cover bg-center w-full bg-fixed min-h-screen">
-
-     {/* header */}
-
+      {/* header */}
       <header
-        className="text-white h-20 flex justify-between items-center px-5 fixed w-full top-0 z-50"
+        className="text-white h-26 flex justify-between items-center p-5  w-full top-0 z-50"
         style={{ backgroundColor: "#E1D3B8" }}
       >
-        {/* Logo and website name */}
-
+        {/* Logo */}
         <div className="flex items-center gap-2">
-          <img className="w-14" src={theorybuddyLogo} alt="Buddy Up Logo" />
-          <div>
-            <p className="text-lg font-bold" style={{ color: "#D3674A" }}>
-              Therapy
-            </p>
-            <p className="text-lg font-bold" style={{ color: "#D3674A" }}>
-              Buddy
-            </p>
+          <div >
+          <img
+          className={`w-20 transition-transform duration-300 `}
+          src={websiteLogo}
+          alt="Buddy Up Logo"
+        />
           </div>
         </div>
-        <div
-          className={`absolute top-20 left-0 w-full bg-black transition-transform duration-300 p-5 ${
-            menuOpen ? "flex flex-col justify-center items-center " : "hidden"
-          } md:flex md:flex-row md:relative md:top-0 md:bg-transparent md:w-auto ${
-            menuOpen ? "gap-x-12" : "gap-x-36"
-          }`}
-        >
-          <a
-            href="#"
-            className="text-lg text-white font-semibold hover:text-gray-300 p-5 transition-colors duration-200"
-            style={{ color: "#D3674A" }}
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="text-lg text-white font-semibold hover:text-gray-300 p-5 transition-colors duration-200"
-            style={{ color: "#D3674A" }}
-          >
-            About
-          </a>
-          <a
-            href="#"
-            className="text-lg text-white font-semibold hover:text-gray-300 p-5 transition-colors duration-200"
-            style={{ color: "#D3674A" }}
-          >
-            Mail
-          </a>
-          <div className="md:hidden mt-4">
-            <button className="hover:bg-blue-700 text-white font-bold py-2 px-6 rounded bg-[#D3674A]">
-              Join Us Now
-            </button>
-          </div>
-        </div>
+        
         <div className="hidden md:block">
-          <button className="hover:bg-red-700 text-white font-bold py-2 px-6 rounded bg-[#D3674A]">
-            Join Us Now
-          </button>
+          <p className="text-lg font-bold" style={{ color: "#D3674A" }}>
+            support@therapybuddy.io
+          </p>
+          <p className="text-lg font-bold" style={{ color: "#D3674A" }}>
+              +91-94178-31415
+            </p>
         </div>
         <FontAwesomeIcon
           icon={faBars}
@@ -82,284 +48,150 @@ function Home() {
         />
       </header>
 
-      {/* hero section */}
-      
-      <section className="flex flex-col justify-center items-center text-center mt-20 w-full max-w-6xl mx-auto px-5">
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div
+          className="absolute h-26 left-0 w-full bg-black p-5 flex flex-col items-center md:hidden"
+          style={{ zIndex: 49 }}
+        >
+          <div>
+          <p className="text-lg font-bold" style={{ color: "#D3674A" }}>
+              +91-94178-31415
+            </p>
+          </div>
+          <div className="mt-4">
+            <p className="text-lg font-bold" style={{ color: "#D3674A" }}>
+              support@therapybuddy.io
+            </p>
+          </div>
+        </div>
+      )}
+
+      <section className="flex flex-col justify-center items-center text-center w-full max-w-6xl mx-auto px-5">
         <div className="mt-20">
           <div
             style={{ color: "#D3674A", fontFamily: "Nunito" }}
             className="text-3xl md:text-6xl font-extrabold not-italic leading-normal"
           >
             <p>Join Our Free Group</p>
-            <p className="mt-4 md:mt-8">Therapy Sessions Today!</p>
+            <p className=" md:mt-8">Therapy Sessions Today!</p>
           </div>
           <div>
             <div className="mt-8 text-lg font-light md:text-xl">
               <p style={{ color: "#463426", fontFamily: "Nunito" }}>
-                Find comfort and support in a community that understands you.
-                Our free
+              It may seem far, but there is light at the end of the tunnel.
               </p>
-              <p style={{ color: "#463426", fontFamily: "Nunito", marginTop: "0.5rem" }}>
-                group therapy sessions provide a safe space for sharing,
-                healing, and
-              </p>
-              <p style={{ color: "#463426", fontFamily: "Nunito",marginTop: "0.5rem" }}>
-                personal growth.
+              <p
+                style={{
+                  color: "#463426",
+                  fontFamily: "Nunito",
+                  marginTop: "0.5rem",
+                }}
+              >
+               Hold our hand and let's go through it together.
+
               </p>
             </div>
-            <p className="text-lg font-bold mt-12">Join us for</p>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-8">
-              <button
-                className="hover:bg-blue-700 text-white font-bold cursor-pointer py-3 px-10 rounded bg-[#D3674A]"
-                onClick={()=> window.location.href = "https://bit.ly/4bd4Mlx"}
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-16">
+              <button className="text-white w-56 font-bold cursor-pointer py-3 px-10 rounded bg-[#D3674A]"
+                onClick={() =>
+                  (window.location.href = "https://bit.ly/4bd4Mlx")
+                }
               >
-                I need Therapy
+                I Seek Therapy
               </button>
               <button
-                className="hover:bg-blue-700 text-white font-bold cursor-pointer py-3 px-10 rounded bg-[#D3674A] mt-5 md:mt-0"
-                onClick={()=> window.location.href = "https://bit.ly/4bfq5Ti"}
+                className="text-white w-56 font-bold cursor-pointer py-3 px-10 rounded bg-[#D3674A] mt-5 md:mt-0"
+                onClick={() =>
+                  (window.location.href = "https://bit.ly/4bfq5Ti")
+                }
               >
-                I give Therapy
+                I Practice Therapy
               </button>
             </div>
-           
           </div>
         </div>
-       
+      </section>
+      <section>
+        <div className="flex-col gap-x-32 justify-evenly mt-4 md:flex justify-center items-center text-center mt-24 w-full max-w-6xl mx-auto px-5 md:flex-row ">
+        <div className="p-5">
+          <img src={bg_2} alt="" />
+        </div> 
+        <div className="text-left">
+      
+        <h2
+            className="text-3xl md:text-5xl font-extrabold mt-6"
+            style={{ color: "#D3674A", fontFamily: "Nunito" }}
+          >
+            What is 
+          </h2>
+          <h2
+            className="text-3xl md:text-5xl font-extrabold mb-8"
+            style={{ color: "#D3674A", fontFamily: "Nunito" }}
+          >
+           Therapy Buddy?
+          </h2>
+          <p className="text-lg md:text-xl font-light mb-8" style={{ color: "#463426", fontFamily: "Nunito" }}>
+            Therapy Buddy is an end-to-end tool for psychotherapists to get discovered by clients and manage their practice efficiently.
+          </p>
+          <p className="text-lg md:text-xl font-light mb-8" style={{ color: "#463426", fontFamily: "Nunito" }}>
+            Here's what we have recognized for early-career therapists, specifically:
+          </p>
+          <ul className="list-disc pl-5 text-lg font-bold md:text-xl font-light mb-8" style={{ color: "#463426", fontFamily: "Nunito" }}>
+            <li >Difficulty in finding supervisors</li>
+            <li >Difficulty in finding clients</li>
+            <li >High commission rates of 3rd party platforms</li>
+          </ul>
+          
+          <p className="text-lg md:text-xl font-light mb-8" style={{ color: "#463426", fontFamily: "Nunito" }}>
+            1st Phase Development will end by mid-July and we don't plan to charge commissions ever.
+          </p>
+        </div>
+        </div>
+      </section>
+      <section className="flex flex-col justify-center items-center text-center w-full max-w-6xl mx-auto px-5">
+        <div className="mt-20">
+        
+        </div>
       </section>
       
-
-      
-
-      <section className="flex flex-col justify-center items-center text-center mt-32 w-full max-w-6xl mx-auto px-5">
-        <p
-          style={{ color: "#D3674A", fontFamily: "Nunito" }}
-          className="text-3xl md:text-5xl font-extrabold not-italic leading-normal"
-        >
-          Group Therapy
-        </p>
-        <div className="mt-8 text-lg font-light md:text-xl">
-          <p style={{ color: "#463426", fontFamily: "Nunito" }}>
-            Experience the benefits of shared healing and collective growth in a
-          </p>
-          <p style={{ color: "#463426", fontFamily: "Nunito", marginTop: "0.5rem" }}>
-            supportive and compassionate environment.
-          </p>
-        </div>
-
-        <div className="flex flex-col md:flex-row justify-center items-center gap-12 mt-12">
-          <div className="flex flex-col items-center">
-            <p className="mt-4 text-xl">College Students</p>
-            <div
-              className="mt-4 border text-xl font-semibold text-black w-64 h-44 rounded-lg flex flex-col items-center justify-center"
-              style={{ color: "#D3674A" }}
-            >
-              <button>Wednesday</button>
-              <p className="mt-4 text-base">Timing</p>
-              <p className="mt-4 text-base text-gray-500">
-                10:00 AM - 12:00 PM
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <p className="mt-4 text-xl">Freelancers/Founders</p>
-            <div
-              className="mt-4 border text-xl font-semibold text-black w-64 h-44 rounded-lg flex flex-col items-center justify-center"
-              style={{ color: "#D3674A" }}
-            >
-              <button>Wednesday</button>
-              <p className="mt-4 text-base">Timing</p>
-              <p className="mt-4 text-base text-gray-500">
-                10:00 AM - 12:00 PM
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center">
-            <p className="mt-4 text-xl">Working Professionals</p>
-            <div
-              className="mt-4 border text-xl font-semibold text-black w-64 h-44 rounded-lg flex flex-col items-center justify-center"
-              style={{ color: "#D3674A" }}
-            >
-              <button>Wednesday</button>
-              <p className="mt-4 text-base">Timing</p>
-              <p className="mt-4 text-base text-gray-500">
-                10:00 AM - 12:00 PM
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section className="flex flex-col justify-center items-center text-center mt-20 w-full max-w-6xl mx-auto px-5">
-        <p
-          style={{ color: "#D3674A", fontFamily: "Nunito" }}
-          className="text-3xl md:text-5xl font-extrabold not-italic leading-normal"
-        >
-          Why Choose Us?
-        </p>
-        <div className="max-w-4xl container mx-auto py-12 flex flex-col items-center">
-          <div className="flex flex-col md:flex-row justify-center gap-12">
-            {/* Integrity */}
-            <div className="flex-1 p-4">
-              <h2
-                className="text-xl md:text-2xl font-semibold text-center mb-6 border w-56 h-12 bg-gray-200 pt-2"
-                style={{
-                  color: "#D3674A",
-                  fontFamily: "Nunito",
-                  margin: "auto",
-                  marginBottom: "20px",
-                }}
-              >
-                Integrity
-              </h2>
-              <ul className="list-disc pl-5 text-base text-left md:text-lg">
-                <li>Honest and transparent interactions</li>
-                <li>Accurate, truthful information</li>
-                <li>Ethical practices ensuring your well-being</li>
-                <li>Trust-based, respectful relationship</li>
-                <li>Safe, supportive therapy environment</li>
-              </ul>
-            </div>
-
-            {/* Professionalism */}
-            <div className="flex-1 p-4">
-              <h2
-                className="text-xl md:text-2xl font-semibold text-center mb-6 border w-56 h-12 bg-gray-200 pt-2"
-                style={{
-                  color: "#D3674A",
-                  fontFamily: "Nunito",
-                  margin: "auto",
-                  marginBottom: "20px",
-                }}
-              >
-                Professionalism
-              </h2>
-              <ul className="list-disc pl-5 text-base text-left md:text-lg">
-                <li>Licensed, empathetic therapists</li>
-                <li>Adherence to professional standards</li>
-                <li>Prompt, thorough care</li>
-                <li>Focus on your unique needs</li>
-                <li>Committed to best mental health outcomes</li>
-              </ul>
-            </div>
-
-            {/* Confidentiality */}
-            <div className="flex-1 p-4">
-              <h2
-                className="text-xl md:text-2xl font-semibold text-center mb-8 border w-56 h-12 bg-gray-200 pt-2"
-                style={{
-                  color: "#D3674A",
-                  fontFamily: "Nunito",
-                  margin: "auto",
-                  marginBottom: "20px",
-                }}
-              >
-                Confidentiality
-              </h2>
-              <ul className="list-disc pl-5 text-base text-left md:text-lg">
-                <li>Prioritizing your privacy</li>
-                <li>Secure data handling</li>
-                <li>Adherence to legal and ethical guidelines</li>
-                <li>Safe space for personal issues</li>
-                <li>Trustworthy, confidential environment</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="bg-gray-100 w-full max-w-4xl container mx-auto py-12 px-4 flex flex-wrap justify-center gap-12">
-        {/* Therapy Buddy */}
-        <div className="flex-1 p-4 max-w-xs">
-          <h2
-            className="text-xl font-semibold text-left mb-6 pt-2"
-            style={{ color: "#D3674A", fontFamily: "Nunito" }}
-          >
-            Therapy Buddy
-          </h2>
-          <p
-            className="text-sm font-thin"
-            style={{ fontFamily: "Nunito", lineHeight: "normal" }}
-          >
-            Hello, we are ABC, trying to make an effort to put the right people
-            for you to get the best results. Just insight
-          </p>
-          <input
-            type="text"
-            placeholder="🔍 search"
-            className="border border-gray-300 p-2 mt-4 w-full"
-          />
-          <div className="flex justify-start gap-4 mt-4">
-            <img src={facebookLogo} alt="Facebook" />
-            <img src={twitterLogo} alt="Twitter" />
-            <img src={instagramLogo} alt="Instagram" />
-          </div>
-        </div>
-
-        {/* Product */}
-        <div className="flex-1 p-4 max-w-xs">
-          <h2
-            className="text-xl font-semibold text-left mb-6 pt-2"
-            style={{ color: "#D3674A", fontFamily: "Nunito" }}
-          >
-            Product
-          </h2>
-          <ul
-            className="text-sm font-thin"
-            style={{ fontFamily: "Nunito", lineHeight: "normal" }}
-          >
-            <li className="mb-2">Autocapture</li>
-            <li className="mb-2">Data Governance</li>
-            <li className="mb-2">Virtual Events</li>
-            <li className="mb-2">Virtual Users</li>
-            <li className="mb-2">Behavioral Analytics</li>
-            <li className="mb-2">Behavioral Analytics</li>
-            <li className="mb-2">Connect</li>
-          </ul>
-        </div>
-
-        {/* Explore */}
-        <div className="flex-1 p-4 max-w-xs">
-          <h2
-            className="text-xl font-semibold text-left mb-6 pt-2"
-            style={{ color: "#D3674A", fontFamily: "Nunito" }}
-          >
-            Explore
-          </h2>
-          <ul
-            className="text-sm font-thin"
-            style={{ fontFamily: "Nunito", lineHeight: "normal" }}
-          >
-            <li className="mb-2">Resource</li>
-            <li className="mb-2">Blog</li>
-            <li className="mb-2">Document</li>
-          </ul>
-        </div>
-
-        {/* Company */}
-        <div className="flex-1 p-4 max-w-xs">
-          <h2
-            className="text-xl font-semibold text-left mb-6 pt-2"
-            style={{ color: "#D3674A", fontFamily: "Nunito" }}
-          >
-            Company
-          </h2>
-          <ul
-            className="text-sm font-thin"
-            style={{ fontFamily: "Nunito", lineHeight: "normal" }}
-          >
-            <li className="mb-2">About us</li>
-            <li className="mb-2">Partners</li>
-            <li className="mb-2">Customers</li>
-            <li className="mb-2">Document</li>
-          </ul>
-        </div>
-      </section>
       <footer
-        className="text-white h-14 flex justify-between text-center items-center px-5 mt-5"
+        className="text-black h-auto flex flex-col justify-center text-center items-center px-5"
         style={{ backgroundColor: "#E1D3B8", textAlign: "center" }}
       >
-        <p>&copy; 2024 Therapy Buddy. All rights reserved.</p>
+        <img className="w-20 mt-4" src={websiteLogo} alt="Buddy Up Logo" />
+        <p className="text-lg font-bold mt-4" style={{ color: "#D3674A" }}>
+        Empowering Mental Health Practitioners! 
+          </p>
+        <div>
+          <div className="flex gap-6 justify-center mt-4">
+            <img className="cursor-pointer w-6 h-6" src={instaLogo} alt="instagram" onClick={() => window.open("https://www.instagram.com/therapybuddyio/", "_blank")}/>
+            <img className="cursor-pointer w-6 h-6" src={twitterLogo} alt="twitter" onClick={() => window.open("https://x.com/TherapyBuddyIO", "_blank")}/>
+            <img className="cursor-pointer w-6 h-6" src={linkdinLogo} alt="linkdin" onClick={() => window.open("https://www.linkedin.com/company/103322295/admin/feed/posts/", "_blank")} alt="" />
+          </div>
+          <p className="text-lg mt-4 font-semibold" style={{ color: "#D3674A" }}>
+            +91-94178-31415
+          </p>
+          <p className="text-lg  font-semibold" style={{ color: "#D3674A" }}>
+            support@therapybuddy.io
+          </p>
+        </div>
+        <div className="text-lg mt-4 font-semibold" style={{ color: "#D3674A" }}>
+          <p>Mohali, Punjab, India, 140308</p>
+          <p>© 2024 by Therapy Buddy. All rights reserved.</p>
+        </div>
+        <div className="text-lg mt-4 font-semibold" style={{ color: "#D3674A" }}>
+          <p
+            onClick={() =>
+              window.open("https://www.utopicplanet.org/terms", "_blank")
+            }
+            className="cursor-pointer"
+            style={{ color: "#D3674A" }}
+          >
+            Terms Of Use | Privacy Policy | Cancellation Policy | Refunds Policy
+            | Offers Policy{" "}
+          </p>
+        </div>
       </footer>
     </div>
   );

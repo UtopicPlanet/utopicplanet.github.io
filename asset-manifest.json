@@ -1,21 +1,19 @@
 {
   "files": {
-    "main.css": "/utopicplanet.github.io/static/css/main.7ad5b68d.css",
-    "main.js": "/utopicplanet.github.io/static/js/main.3b94eae9.js",
+    "main.css": "/utopicplanet.github.io/static/css/main.ab724e6b.css",
+    "main.js": "/utopicplanet.github.io/static/js/main.bb3a532e.js",
     "static/js/453.3598de73.chunk.js": "/utopicplanet.github.io/static/js/453.3598de73.chunk.js",
     "static/media/theorpybuddy.png": "/utopicplanet.github.io/static/media/theorpybuddy.9b9dcdb1a8e2ae8f924e.png",
-    "static/media/group_image_1.png": "/utopicplanet.github.io/static/media/group_image_1.e6dd44a18d5d54ae135f.png",
-    "static/media/group_image_2.png": "/utopicplanet.github.io/static/media/group_image_2.9c43384f171644951f48.png",
     "static/media/insta_logo.svg": "/utopicplanet.github.io/static/media/insta_logo.f78d6ac21a9acc3201c7f5ca4162720f.svg",
     "static/media/twitter_logo.svg": "/utopicplanet.github.io/static/media/twitter_logo.8bcfb0676aa08c6a841bb434a777ee1b.svg",
     "index.html": "/utopicplanet.github.io/index.html",
     "static/media/facebook_logo.svg": "/utopicplanet.github.io/static/media/facebook_logo.77ac6c2e84c6a7a48dbef5e0fd98809b.svg",
-    "main.7ad5b68d.css.map": "/utopicplanet.github.io/static/css/main.7ad5b68d.css.map",
-    "main.3b94eae9.js.map": "/utopicplanet.github.io/static/js/main.3b94eae9.js.map",
+    "main.ab724e6b.css.map": "/utopicplanet.github.io/static/css/main.ab724e6b.css.map",
+    "main.bb3a532e.js.map": "/utopicplanet.github.io/static/js/main.bb3a532e.js.map",
     "453.3598de73.chunk.js.map": "/utopicplanet.github.io/static/js/453.3598de73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ad5b68d.css",
-    "static/js/main.3b94eae9.js"
+    "static/css/main.ab724e6b.css",
+    "static/js/main.bb3a532e.js"
   ]
 }

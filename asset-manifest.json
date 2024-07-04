@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/utopicplanet.github.io/static/css/main.86a84671.css",
-    "main.js": "/utopicplanet.github.io/static/js/main.cd52f5aa.js",
+    "main.css": "/utopicplanet.github.io/static/css/main.774e7253.css",
+    "main.js": "/utopicplanet.github.io/static/js/main.58eed355.js",
     "static/js/453.3598de73.chunk.js": "/utopicplanet.github.io/static/js/453.3598de73.chunk.js",
     "static/media/new_webiste_logo.png": "/utopicplanet.github.io/static/media/new_webiste_logo.44ac55b23e3ff7c1e0a2.png",
     "static/media/bg_2.png": "/utopicplanet.github.io/static/media/bg_2.4303c2c6502b18af8332.png",
@@ -9,12 +9,12 @@
     "static/media/linkdin_logo.svg": "/utopicplanet.github.io/static/media/linkdin_logo.1f3702890164bc23757364ade4c4f13a.svg",
     "index.html": "/utopicplanet.github.io/index.html",
     "static/media/twitter_logo.svg": "/utopicplanet.github.io/static/media/twitter_logo.feba4f7959ffb3307dbe7d2439e0f5b7.svg",
-    "main.86a84671.css.map": "/utopicplanet.github.io/static/css/main.86a84671.css.map",
-    "main.cd52f5aa.js.map": "/utopicplanet.github.io/static/js/main.cd52f5aa.js.map",
+    "main.774e7253.css.map": "/utopicplanet.github.io/static/css/main.774e7253.css.map",
+    "main.58eed355.js.map": "/utopicplanet.github.io/static/js/main.58eed355.js.map",
     "453.3598de73.chunk.js.map": "/utopicplanet.github.io/static/js/453.3598de73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.86a84671.css",
-    "static/js/main.cd52f5aa.js"
+    "static/css/main.774e7253.css",
+    "static/js/main.58eed355.js"
   ]
 }

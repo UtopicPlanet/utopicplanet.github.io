@@ -56,7 +56,7 @@ function Home() {
         >
           <div>
             <p className="text-lg font-bold" style={{ color: "#D3674A" }}>
-              +91-94178-31415
+            +91-70057-06432
             </p>
           </div>
           <div className="mt-4">
@@ -93,7 +93,7 @@ function Home() {
             </div>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-16">
               <button
-                className="text-white md:w-1/2 font-bold cursor-pointer py-3 px-10 rounded bg-[#D3674A] md:w-full"
+                className="text-white md:w-1/2 font-bold cursor-pointer py-3 px-10 rounded bg-[#D3674A] md:w-1/2"
                 onClick={() =>
                   (window.location.href = "https://bit.ly/4bd4Mlx")
                 }

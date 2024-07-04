@@ -38,7 +38,7 @@ function Home() {
             support@therapybuddy.io
           </p>
           <p className="text-lg font-bold" style={{ color: "#D3674A" }}>
-            +91-94178-31415
+          +91-70057-06432
           </p>
         </div>
         <FontAwesomeIcon
@@ -113,7 +113,7 @@ function Home() {
         </div>
       </section>
       <section>
-        <div className="flex-col gap-x-32 justify-evenly mt-4 md:flex justify-center items-center text-center mt-24 w-full max-w-6xl mx-auto px-5 md:flex-row ">
+        <div className="flex-col gap-x-32 justify-evenly mt-20 md:flex justify-center items-center text-center mt-20 w-full max-w-6xl mx-auto px-5 md:flex-row ">
           <div className="p-5">
             <img src={bg_2} alt="" />
           </div>
@@ -176,9 +176,9 @@ function Home() {
           Empowering Mental Health Practitioners!
         </p>
         <div>
-          <div className="flex gap-6 justify-center mt-4">
+          <div className="flex gap-6 justify-center mt-2">
             <img
-              className="cursor-pointer w-6 h-6"
+              className="cursor-pointer w-4 h-4"
               src={instaLogo}
               alt="instagram"
               onClick={() =>
@@ -189,7 +189,7 @@ function Home() {
               }
             />
             <img
-              className="cursor-pointer w-6 h-6"
+              className="cursor-pointer w-4 h-4"
               src={twitterLogo}
               alt="twitter"
               onClick={() =>
@@ -197,7 +197,7 @@ function Home() {
               }
             />
             <img
-              className="cursor-pointer w-6 h-6"
+              className="cursor-pointer w-4 h-4"
               src={linkdinLogo}
               alt="linkdin"
               onClick={() =>
@@ -206,14 +206,14 @@ function Home() {
                   "_blank"
                 )
               }
-              alt=""
+      
             />
           </div>
           <p
             className="text-lg mt-4 font-semibold"
             style={{ color: "#D3674A" }}
           >
-            +91-94178-31415
+            +91-70057-06432
           </p>
           <p className="text-lg  font-semibold" style={{ color: "#D3674A" }}>
             support@therapybuddy.io
@@ -227,7 +227,7 @@ function Home() {
           <p>© 2024 by Therapy Buddy. All rights reserved.</p>
         </div>
         <div
-          className="text-lg mt-4 font-semibold"
+          className="text-lg mt-4 font-semibold flex justify-center flex-wrap gap-2"
           style={{ color: "#D3674A" }}
         >
           <p
@@ -237,7 +237,42 @@ function Home() {
             className="cursor-pointer"
             style={{ color: "#D3674A" }}
           >
-            Terms Of Use | Privacy Policy | Cancellation Policy | Refunds Policy
+            Terms Of Use&nbsp;
+          </p>
+          <p
+            onClick={() =>
+              window.open("https://www.utopicplanet.org/privacy", "_blank")
+            }
+            className="cursor-pointer"
+            style={{ color: "#D3674A" }}
+          >
+              | Privacy Policy&nbsp; 
+          </p>
+          <p
+            onClick={() =>
+              window.open("https://www.utopicplanet.org/cancellation", "_blank")
+            }
+            className="cursor-pointer"
+            style={{ color: "#D3674A" }}
+          >
+            | Cancellation Policy&nbsp;
+          </p>
+          <p
+            onClick={() =>
+              window.open("https://www.utopicplanet.org/refunds", "_blank")
+            }
+            className="cursor-pointer"
+            style={{ color: "#D3674A" }}
+          >
+            | Refunds Policy&nbsp;  
+          </p>
+          <p
+            onClick={() =>
+              window.open("https://www.utopicplanet.org/offers", "_blank")
+            }
+            className="cursor-pointer"
+            style={{ color: "#D3674A" }}
+          >
             | Offers Policy{" "}
           </p>
         </div>

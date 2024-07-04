@@ -93,20 +93,12 @@ function Home() {
             </div>
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mt-16">
               <button
-                className="text-white w-56 font-bold cursor-pointer py-3 px-10 rounded bg-[#D3674A]"
+                className="text-white md:w-1/2 font-bold cursor-pointer py-3 px-10 rounded bg-[#D3674A] md:w-full"
                 onClick={() =>
                   (window.location.href = "https://bit.ly/4bd4Mlx")
                 }
               >
-                I Seek Therapy
-              </button>
-              <button
-                className="text-white w-56 font-bold cursor-pointer py-3 px-10 rounded bg-[#D3674A] mt-5 md:mt-0"
-                onClick={() =>
-                  (window.location.href = "https://bit.ly/4bfq5Ti")
-                }
-              >
-                I Practice Therapy
+                Register Now
               </button>
             </div>
           </div>
